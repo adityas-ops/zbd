@@ -167,8 +167,54 @@ export default function Home() {
         </div>
       </div>
       {/* new sections */}
-      <div className="">
-        
+      <div className=" bg-[#edeff9] mx-auto  rounded-[25px] py-[38px] px-[63px] mb-[105px] flex justify-evenly" style={{
+        maxWidth:"calc(100vw - 50px)"
+      }}>
+        <div>
+          <p className="text-[38px] mb-[8px] font-[900] text-[#121422]">BECOME A PARTNER</p>
+          <div className="relative">
+            <div className=" text-[1rem] max-w-[470px] w-full h-full">
+            Like what you’re seeing? Want to integrate ZEBEDEE into your products? Learn more or get started!
+            </div>
+            <div className=" text-[1rem] font-[700] flex items-center absolute bottom-0 right-0 text-[#916ef7]">
+            For Developers
+            <img
+            src="https://zbd.gg/new-icons/arrow-purple.svg"
+            className=" ml-[6px] mb-[2px]"
+            alt="as"
+            />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className=" flex  h-full items-center justify-center">
+            <img 
+            src="https://zbd.gg/new-icons/partner1.svg"
+            className=" ml-[40px]"
+            alt="as"
+            />
+            <img 
+            src="https://zbd.gg/new-icons/partner2.svg"
+            className="ml-[40px]"
+            alt="as"
+            />
+            <img 
+            src="https://zbd.gg/new-icons/partner3.svg"
+            className=" ml-[40px]"
+            alt="as"
+            />
+          </div>
+        </div>
+      </div>
+      <div className=" flex fixed bottom-[48px] right-0 w-[285px] items-center  bg-[#916ef7] text-white rounded-l-[15px] z-[100]">
+        <div className=" text-[20px] font-[900] h-full flex items-center  text-center ml-[9px]">
+        DOWNLOAD ZBD APP
+        </div>
+        <img 
+        src="https://zbd.gg/appstore/download-qr-code.png"
+        className=" w-[101px] h-[101px] m-[12px]"
+        alt="as"
+        />
       </div>
     </div>
   );
