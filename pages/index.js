@@ -177,12 +177,12 @@ export default function Home() {
       </div>
       {/* new sections */}
       <div
-        className=" bg-[#edeff9] mx-auto  rounded-[25px] py-[38px] px-[30px] sm:px-[63px] mb-[105px] flex justify-evenly"
+        className=" bg-[#edeff9] mx-auto w-full  rounded-[25px] py-[38px] px-[30px] sm:px-[63px] mb-[105px] flex justify-evenly"
         style={{
           maxWidth: "calc(100vw - 50px)",
         }}
       >
-        <div className="w-full">
+        <div className="w-full sm:w-fit">
           <p className="sm:text-[38px] text-[28px] leading-[1] mb-[8px] font-[900] text-[#121422]">
             BECOME A PARTNER
           </p>
