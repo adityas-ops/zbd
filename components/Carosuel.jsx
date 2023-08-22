@@ -37,13 +37,16 @@ const data = [
 
 function Carosuel() {
   const [padd, setPadd] = useState("1rem");
+  const [page, setPage] = useState(1);
   useEffect(() => {
     const handleResize = () => {
       // Adjust perPage based on screen size
       if (window.innerWidth < 768) {
         setPadd("1rem");
+        setPage(1);
       } else {
         setPadd("0rem");
+        setPage(3);
       }
     };
 
@@ -60,7 +63,7 @@ function Carosuel() {
   }, []);
 
   return (
-    <div className=" max-w-[1050px]  mx-auto relative">
+    <div className=" sm:max-w-[1050px] w-full   mx-auto relative">
       <Splide
         hasTrack={false}
         aria-label="..."
@@ -68,51 +71,75 @@ function Carosuel() {
           padding: padd,
           type: "loop",
           pagination: false,
-          perPage: 3,
-          rewind : true,
+          perPage: page,
+          rewind: true,
           perMove: 1,
         }}
       >
-        <SplideTrack 
-      
-        >
+        <SplideTrack>
           {data.map((item, index) => {
             return (
               <SplideSlide key={index}>
                 <div
-                  className="mr-[54px]  w-[300px] h-[300px] "
+                  className="mr-[54px]  min-w-[300px] max-w-[300px] h-[300px] "
                   style={{
                     flex: "0 0 300px",
                   }}
                 >
                   <div className=" flex flex-col bg-[#edeff9]  rounded-[25px] ">
-                    <img src={item.img} className=" rounded-t-[25px] h-[192px]" alt="..." />
-                   
-                      <h5 className=" font-[700] mt-[15px] text-center mb-[8px] text-[18px]">{item.name}</h5>
-                      <p className=" mt-0 text-center px-[5px] font-[400] text-[14px]">{item.desc}</p>
+                    <img
+                      src={item.img}
+                      className=" rounded-t-[25px] h-[192px]"
+                      alt="..."
+                    />
+
+                    <h5 className=" font-[700] mt-[15px] text-center mb-[8px] text-[18px]">
+                      {item.name}
+                    </h5>
+                    <p className=" mt-0 text-center px-[5px] font-[400] text-[14px]">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </SplideSlide>
             );
           })}
         </SplideTrack>
-          <div className=" absolute w-full top-[40%]">
-        <div className="splide__arrows w-full flex relative justify-between">
-          <button className="splide__arrow splide__arrow--prev absolute left-[-5%]">
-            <img 
-            src="https://zbd.gg/icons/arrow-left.svg"
-            className=""
-            alt="as"
-            />
-          </button>
-          <button className="splide__arrow splide__arrow--next absolute right-0">
-            <img 
-            src="https://zbd.gg/icons/arrow-right.svg"
-            className=""
-            alt="s"
-            />
-          </button>
+        <div className=" hidden sm:block absolute w-full top-[40%]">
+          <div className="splide__arrows w-full flex relative justify-between">
+            <button className="splide__arrow splide__arrow--prev absolute left-[-5%]">
+              <img
+                src="https://zbd.gg/icons/arrow-left.svg"
+                className=""
+                alt="as"
+              />
+            </button>
+            <button className="splide__arrow splide__arrow--next absolute right-0">
+              <img
+                src="https://zbd.gg/icons/arrow-right.svg"
+                className=""
+                alt="s"
+              />
+            </button>
+          </div>
         </div>
+        <div className=" block sm:hidden absolute w-full bottom-[-10%]">
+          <div className="splide__arrows w-full flex relative justify-between">
+            <button className="splide__arrow splide__arrow--prev absolute left-[20%]">
+              <img
+                src="https://zbd.gg/icons/arrow-left.svg"
+                className=""
+                alt="as"
+              />
+            </button>
+            <button className="splide__arrow splide__arrow--next absolute right-[10%]">
+              <img
+                src="https://zbd.gg/icons/arrow-right.svg"
+                className=""
+                alt="s"
+              />
+            </button>
+          </div>
         </div>
       </Splide>
     </div>
