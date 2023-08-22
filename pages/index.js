@@ -1,118 +1,175 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Carosuel from "@/components/Carosuel";
+import Hero from "@/components/LandingPage/Hero";
 
-const inter = Inter({ subsets: ['latin'] })
+const cData = [
+  {
+    name: "Fountain",
+    img: "https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/Fountain-300.jpg",
+  },
+  {
+    name: "Bitcoin Miner",
+    img: "https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/BTC-Miner-300.jpg",
+  },
+  {
+    name: "BrainDoku",
+    img: "https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/250%20250.jpg",
+  },
+  {
+    name: "Coin Mehjong",
+    img: "https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/Coin-Mahjong-300.jpg",
+  },
+  {
+    name: "Solitaire",
+    img: "https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/Solitaire-300.jpg",
+  },
+];
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="w-full h-full relative font-Whyte">
+      <Hero />
+      <div className="max-w-[1150px] mx-auto mb-[100px] w-full">
+        <div className="flex items-center flex-col sm:flex-row justify-between">
+          {/* first div  */}
+          <div className=" flex justify-center  order-1 mt-[40px] w-[595px] flex-grow flex-shrink basis-0">
+            <img
+              src="https://zbd.gg/new-fpo/homepage1.png"
+              className=" max-w-[395px]"
+              alt="logo"
             />
-          </a>
+          </div>
+          {/* second div  */}
+          <div className="order-2 flex-grow flex-col flex-shrink basis-0 flex w-full h-[75%] pl-0  ">
+            <h1 className=" text-left pb-[10px] text-[3rem] leading-[1.05] text-[#121422] font-[900]">
+              PLAY & EARN
+            </h1>
+            <p className=" text-left max-w-[520px] text-[18px] leading-[1.5] ">
+              Why just play for fun, when you can get some free Bitcoin while
+              you’re at it? Discover your next favorite game, or go beyond
+              gaming with rewarded podcasting apps and more.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="max-w-[1150px] mx-auto mb-[100px] w-full">
+        <div className="flex items-center flex-col sm:flex-row justify-between">
+          {/* first div  */}
+          <div className=" flex justify-center  order-2 mt-[40px] w-[595px] flex-grow flex-shrink basis-0">
+            <img
+              src="https://zbd.gg/v3/social.png"
+              className=" max-w-[395px]"
+              alt="logo"
+            />
+          </div>
+          {/* second div  */}
+          <div className="order-1 flex-grow flex-col flex-shrink basis-0 flex w-full h-[80%] pl-0  ">
+            <h1 className=" text-left pb-[10px] text-[3rem] leading-[1.05] text-[#121422] font-[900]">
+              ZBD + SOCIAL
+            </h1>
+            <p className=" text-left mb-[22px] max-w-[520px] text-[18px] leading-[1.5] ">
+              Meet the first social app where creators pocket 99% of their
+              earnings. Create content, and earn Bitcoin. Or show your support
+              by zapping your favorite creators with Bitcoin.
+            </p>
+            <div className=" flex  ">
+              <button className=" font-bold leading-[1] mt-[10px] rounded-[8px] text-[1rem] text-center flex items-center justify-center py-[12px] w-[246px] bg-[#916ef7] text-white">
+                Join the Waitlist
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* third */}
+      <div className="max-w-[1150px] mx-auto mb-[100px] w-full">
+        <div className="flex items-center flex-col sm:flex-row justify-between">
+          {/* first div  */}
+          <div className=" flex justify-center  order-1 mt-[40px] w-[595px] flex-grow flex-shrink basis-0">
+            <img
+              src="https://zbd.gg/new-fpo/homepage2.webp"
+              className=" max-w-[395px]"
+              alt="logo"
+            />
+          </div>
+          {/* second div  */}
+          <div className="order-2 flex-grow flex-col flex-shrink basis-0 flex w-full h-[75%] pl-0  ">
+            <h1 className=" text-left pb-[10px] text-[3rem] leading-[1.05] text-[#121422] font-[900]">
+              SPEND ANYWHERE
+            </h1>
+            <p className=" text-left max-w-[520px] text-[18px] leading-[1.5] ">
+              Leveled up your Bitcoin? Now it&apos;s your turn to shop! Buy gift
+              cards from the brands you love inside ZBD or use it as your
+              Bitcoin wallet. Spend it here, there, anywhere!
+            </p>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+      {/*  new section */}
+      <div className=" max-w-[1150px] mx-auto py-[62px] px-[67px] bg-[#edeff9] rounded-[25px] mb-[80px] ">
+        <p className=" text-[3rem] font-[900] text-[#121422] leading-[1.05]">
+          FEATURED APPS
+        </p>
+        <div className=" flex mt-[45px]">
+          {cData.map((item, index) => {
+            return (
+              <>
+                <div key={index} className="pr-[65px]">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className=" rounded-[25px] w-[150px] h-[150px]"
+                  />
+                  <p className=" font-[700] mt-[14px] text-[18px]">
+                    {item.name}
+                  </p>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </div>
+      {/* new section */}
+      <div className=" mb-[150px] w-full">
+        <p className="text-[3rem] font-[900] leading-[1.05] text-[#121422] text-center ">
+          WHAT&apos;S HOT
+        </p>
+        <div className="mt-[45px] flex">
+          <Carosuel />
+        </div>
+      </div>
+      {/* new section */}
+
+      <div className="max-w-[1150px] mx-auto mb-[100px] w-full">
+        <div className="flex items-center flex-col sm:flex-row justify-between">
+          {/* first div  */}
+          <div className=" flex justify-center  order-2 mt-[40px] w-[595px] flex-grow flex-shrink basis-0">
+            <img
+              src="https://zbd.gg/new-fpo/homepage4.webp"
+              className=" max-w-[395px]"
+              alt="logo"
+            />
+          </div>
+          {/* second div  */}
+          <div className="order-1 flex-grow flex-col flex-shrink basis-0 flex w-full h-[80%] pl-0  ">
+            <h1 className=" text-left pb-[10px] text-[3rem] leading-[1.05] text-[#121422] font-[900]">
+              ZBD EXTENSIONS
+            </h1>
+            <p className=" text-left mb-[22px] max-w-[520px] text-[18px] leading-[1.5] ">
+              It all gravitates around the ZBD app, but the ZBD Universe is much
+              bigger than that. Discover more tools, bots and plugins!
+            </p>
+            <div className=" flex  ">
+              <button className=" font-bold leading-[1] mt-[10px] rounded-[8px] text-[1rem] text-center flex items-center justify-center py-[12px] w-[246px] bg-[#916ef7] text-white">
+                Check it Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* new sections */}
+      <div className="">
+        
+      </div>
+    </div>
+  );
 }
