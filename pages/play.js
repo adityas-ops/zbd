@@ -77,23 +77,23 @@ function Play() {
   return (
     <>
       <div className="w-[100vw] font-Whyte relative ">
-        <div className=" w-full max-w-[1150px] mx-auto px-[25px] sm:px-0 flex justify-center items-center min-h-auto flex-col">
+        <div className=" w-full max-w-[1150px] mx-auto  sm:px-0 flex justify-center items-center min-h-auto flex-col">
           {/* new section */}
-          <div className=" pt-[161px] pb-[105px]  ">
-            <div className="flex ">
+          <div className=" sm:pt-[161px] sm:pb-[105px] px-[25px]  ">
+            <div className="flex sm:flex-row flex-col  h-[650px] sm:h-full">
               <img
                 src="https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/1x1.jpg"
-                className=" rounded-[25px] max-h-[384px] max-w-[384px] p-[13px]  mr-[55px]"
+                className=" rounded-[25px] max-h-[384px] w-full sm:max-w-[384px] sm:p-[13px]  sm:mr-[55px]"
                 alt="as"
               />
               <div>
                 <p className="text-[1rem] leading-[1.4] font-[700] mb-[8px] mt-[1rem] ">
                   ZBD Quests
                 </p>
-                <p className=" uppercase text-[3rem] font-[900] m-0 tracking-[1px]">
+                <p className=" uppercase sm:text-[3rem] whitespace-nowrap sm:whitespace-normal text-[28px] font-[900] m-0 tracking-[1px]">
                   Early Access Quest{" "}
                 </p>
-                <div className="flex items-center justify-center mb-[50px]">
+                <div className="flex items-center justify-center mb-[20px] sm:mb-[50px]">
                   <div className="w-full h-[7px] bg-[#b5b5be]  rounded-[10px] relative">
                     <div className="w-[77%] rounded-[10px] h-[7px] bg-[#916ef7]" />
                     <div className=" absolute right-0 top-[-12px]">
@@ -118,11 +118,11 @@ function Play() {
             </div>
           </div>
           {/* new section */}
-          <div className=" max-w-[1150px] mx-auto w-full mb-[38px] px-[67px] pb-[62px]">
-            <p className=" font-[900] uppercase text-[3rem] text-[#121422] leading-[1.1]">
+          <div className=" max-w-[1150px] px-[25px] mx-auto w-full mb-[38px] sm:px-[67px] pb-[20px] sm:pb-[62px]">
+            <p className=" font-[900] uppercase text-[28px] sm:text-[3rem] text-[#121422] leading-[1.1]">
               featured app
             </p>
-            <div className="flex mt-[40px]">
+            <div className="flex mt-[20px] sm:mt-[40px]">
               <div className=" hidden sm:flex">
                 <div className="mr-[73px]">
                   <img
@@ -156,22 +156,40 @@ function Play() {
                   })}
                 </div>
               </div>
+              <div className=" flex sm:hidden overflow-x-scroll">
+              {Data.map((item, index) => {
+                    return (
+                      <>
+                        <div key={index} className="flex flex-col  mx-[20px] ">
+                          <img
+                            src={item.img}
+                            className=" rounded-[25px] h-[120px] w-full min-w-[120px] max-w-[120px]"
+                            alt={item.name}
+                          />
+                          <p className=" mt-[14px] font-[700] text-[16px] text-[#121422]">
+                            {item.name}
+                          </p>
+                        </div>
+                      </>
+                    );
+                  })}
+              </div>
             </div>
           </div>
           {/* new sections */}
-          <div className=" max-w-[1120px] mx-auto py-[54px] px-[59px] w-full rounded-[25px] bg-[#edeff9]">
-            <p className=" font-[900] text-[3rem] leading-[1.1] uppercase ">
+          <div className=" max-w-[1120px] mx-auto py-[54px] px-[25px] sm:px-[59px] w-full sm:rounded-[25px] bg-[#edeff9]">
+            <p className=" font-[900] text-[28px] sm:text-[3rem] leading-[1.1] uppercase ">
               events
             </p>
-            <div className=" mt-[36px] flex ">
-                <div className=" flex mr-[50px] relative overflow-hidden ">
+            <div className=" mt-[36px] flex  flex-col sm:flex-row items-center">
+                <div className=" flex mr-0 sm:mr-[50px] relative justify-center">
                     <img 
                     src="https://22682105.fs1.hubspotusercontent-na1.net/hubfs/22682105/Artboard-1-copy.png"
-                    className=" h-[450px] max-w-[362px] max-h-[452px] rounded-[25px]"
+                    className=" h-[450px] w-full mx-auto sm:max-w-[362px] max-h-[452px] rounded-[25px]"
                     alt="as"
                     />
                 </div>
-                <div className=" max-w-[500px] w-full ">
+                <div className=" max-w-[500px] w-full mt-[40px] ">
                 {
                   data2.map((item,index)=>{
                     return(
@@ -179,13 +197,13 @@ function Play() {
                         <div key={index} className="flex h-[120px] mb-[45px]">
                         <img 
                         src={item.img}
-                        className=" rounded-l-[25px] w-[150px] h-full"
+                        className=" rounded-l-[25px] w-[100px] sm:w-[150px] h-full"
                         alt="a"
                         />
-                        <div className=" w-full pl-[35px] h-full rounded-r-[25px] bg-[#f8f8ff]">
+                        <div className=" w-full sm:pl-[35px] pl-[15px] h-full rounded-r-[25px] bg-[#f8f8ff]">
                             <p className="font-[900] text-[14px] mt-[20px] mb-[5px] uppercase">{item.name}</p>
-                            <p className=" font-[700] text-[24px] leading-[1] max-w-[300px]">{item.name2}</p>
-                            <p className=" font-[400] mt-[5px]  text-[14px]">{item.date}</p>
+                            <p className=" font-[700] text-[20px] sm:text-[24px] leading-[1] max-w-[300px]">{item.name2}</p>
+                            <p className=" font-[400] mt-[5px] text-[12px] mr-[5px]  sm:text-[14px]">{item.date}</p>
                         </div>
                         </div>
                         </>
@@ -196,14 +214,14 @@ function Play() {
             </div>
           </div>
           {/* new section */}
-          <div className=" mt-[80px] mb-[100px] flex flex-col items-center justify-center">
-                  <p className=" text-[3rem] font-[900]">JOIN OUR GAMING COMMUNITY</p>
+          <div className=" mt-[80px] mb-[100px] px-[25px] sm:px-0 flex flex-col items-center justify-center">
+                  <p className=" sm:text-[3rem] text-[28px] text-center sm:text-left leading-[1.4] font-[900]">JOIN OUR GAMING COMMUNITY</p>
                   <div className=" mt-[26px] flex flex-col sm:flex-row  ">
-                    <button className=" text-white py-[11.5px] w-[246px] bg-[#916ef7] rounded-[8px] mr-[31px] font-[700] flex items-center justify-center">
+                    <button className=" text-white py-[11.5px] w-[350px] sm:w-[246px] bg-[#916ef7] rounded-[8px] mr-0 mb-[20px] sm:mr-[31px] font-[700] flex items-center justify-center">
                         Twitter
                     </button>
-                    <button className=" text-white py-[11.5px] w-[246px] bg-[#916ef7]  rounded-[8px] font-[700] flex items-center justify-center">
-                        Twitter
+                    <button className=" text-white py-[11.5px] w-[350px] sm:w-[246px] bg-[#916ef7]  rounded-[8px] font-[700] flex items-center justify-center">
+                       Discord
                     </button>
                   </div>
           </div>
