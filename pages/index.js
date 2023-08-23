@@ -1,4 +1,4 @@
-import Carosuel from "@/components/Carosuel";
+import Carosuel from "@/components/LandingPage/Carosuel";
 import Hero from "@/components/LandingPage/Hero";
 
 const cData = [
