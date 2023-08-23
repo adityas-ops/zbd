@@ -217,10 +217,10 @@ function Play() {
           <div className=" mt-[80px] mb-[100px] px-[25px] sm:px-0 flex flex-col items-center justify-center">
                   <p className=" sm:text-[3rem] text-[28px] text-center sm:text-left leading-[1.4] font-[900]">JOIN OUR GAMING COMMUNITY</p>
                   <div className=" mt-[26px] flex flex-col sm:flex-row  ">
-                    <button className=" text-white py-[11.5px] w-[350px] sm:w-[246px] bg-[#916ef7] rounded-[8px] mr-0 mb-[20px] sm:mr-[31px] font-[700] flex items-center justify-center">
+                    <button className=" text-white py-[11.5px] w-[350px] h-[50px] sm:w-[246px] bg-[#916ef7] rounded-[8px] mr-0 mb-[20px] sm:mr-[31px] font-[700] flex items-center justify-center">
                         Twitter
                     </button>
-                    <button className=" text-white py-[11.5px] w-[350px] sm:w-[246px] bg-[#916ef7]  rounded-[8px] font-[700] flex items-center justify-center">
+                    <button className=" text-white py-[11.5px] h-[50px] w-[350px] sm:w-[246px] bg-[#916ef7]  rounded-[8px] font-[700] flex items-center justify-center">
                        Discord
                     </button>
                   </div>
